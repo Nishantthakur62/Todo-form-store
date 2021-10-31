@@ -1,19 +1,18 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../Context/GlobalState";
+import TodoItem from "./TodoItem";
 
 const TodoList = () => {
   const { todos } = useContext(GlobalContext);
 
-  console.log(todos);
-
   return (
-    <div className="Todo">
-      <h3>User One </h3>
-      <div className="Buttons">
-        <button className="Edit">Edit</button>
-        <button className="Delete">Delete</button>
-      </div>
-    </div>
+    <React.Fragment>
+      {!todos.length ? (
+        <h1>Sorry, No Todos</h1>
+      ) : (
+        todos.map((item, idx) => <TodoItem item={item} idx={idx} />)
+      )}
+    </React.Fragment>
   );
 };
 
