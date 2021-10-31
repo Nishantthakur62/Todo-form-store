@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+.Todo{
+ display: flex;
+ justify-content: space-between;
+ padding: 10px 5px ;
+ width: 800px;
+ height: 50px;
+ background-color:white;
+ border: 1px solid #ccc;
+ border-radius: 10px;
+ align-items: center;
+}
+.Todo .Buttons button
+{
+	outline: none;
+	border: none;
+	text-align: center;
+	padding: 5px 10px;
+	margin: 0px 5px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.Todo .Buttons :nth-child(1)
+{
+ background-color: yellow;	
+ 
+
+}
+.Todo .Buttons :nth-child(2)
+{
+	background-color:red;
+	color: white;
+}
+.TodoWrapper{
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px;
+  
+
+}
